@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+    <!-- Old Way to install scripts -->
+    <!-- HTML4 and (x)HTML -->
+    <!--<script type="text/javascript" src="javascript.js"></script>-->
+
+    <!-- New Way (HTML 5)-->
+
+    <!--<script type="text/javascript" src="assignment.js"></script>-->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<h1>Result:</h1>
+<div id="result">
+    <!-- javascript will make a new div-->
+    <!--<div> [Answer  will be append here!!]  </div>-->
+</div>
+<body>
+<h1>Result:</h1>
+<div id="result"></div>
+</body>
+<script>
+    var assignment = {
+        log: function(message, number) {
+            let result = document.querySelector("#result").appendChild(document.createElement('div')),
+                resultMessage,
+                resultTitle;
+            number = number || '';
+            result.className = number % 2 ? '': 'even';
+            if (typeof message === 'object') {
+                message = JSON.stringify(message);
+            }
+            resultTitle = result.appendChild(document.createElement('b'));
+            resultMessage = result.appendChild(document.createElement('span'));
+            resultTitle.textContent = `Test ${number}: `;
+            resultMessage.textContent = `${message}`;
+        }
+    };
+
+    Object.prototype.valueOf = function() {
+        return JSON.stringify(this);
+    }
+
+
+
+</script>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

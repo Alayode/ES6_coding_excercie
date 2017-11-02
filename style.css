@@ -1,0 +1,7 @@
+#result div {
+    padding: 10px;
+}
+
+#result div.even {
+    background-color: #ddd;
+}
