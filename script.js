@@ -83,20 +83,25 @@ assignment.log(flipKeyValue(c) == '{"0":"age","Your Name":"name","Your Last Name
 // //#3 write code so that both console logs print out true
 // //   getFullName() should return a string where all property values of the object are concatinated and separated with ', '
 //
-var getFullName = function() {
-    // [your code goes here]
 
+var d = {
+    'firstName' : 'First Name',
+    'lastName': 'Last Name',
+    'getFullName': getFullName = function(dValues) {
+        // [your code goes here]
+        var fn, ln, concatValue;
+        dValues = Object.values(d);
+        dValues.pop();
+         fn = dValues[0];
+         ln = dValues[1];
+
+        return fn + ", " +ln
+    }
 }
 
-var c = {
-    firstName: 'First Name',
-    lastName: 'Last Name',
-    getFullName: getFullName
-}
+console.log(d.getFullName());
 
-console.log(c)
-
-// assignment.log(c.getFullName() === 'First Name, Last Name', 3);
+assignment.log(d.getFullName() === 'First Name, Last Name', 3);
 //
 // c = {
 //     'first.name': 'Second Name',
