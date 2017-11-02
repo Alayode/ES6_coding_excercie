@@ -102,37 +102,48 @@ var d = {
 console.log(d.getFullName());
 
 assignment.log(d.getFullName() === 'First Name, Last Name', 3);
-//
-// c = {
-//     'first.name': 'Second Name',
-//     'last.name': 'Second Last Name',
-//     'getFullName': getFullName
-// }
-//
-// assignment.log(c.getFullName() === 'Second Name, Second Last Name', 3);
-//
-//
-//
-//
-//
-// //#4 write code so that console logs print out true
-// //   filterGreaterThan(array, filter) should return a new array
-// //   with all the values from initial array that are greater than filter
-// //   i.e. [6, 10, 123, 16, 7, 8, 9, 11] and [123, 16, 11]
-//
-// function filterGreaterThan(array, filter) {
-//     // [your code goes here]
-// }
-//
-// d = [5, 6, 10, -1, 123, 1, 3, 16, 7, 8, 9, 11];
-//
-// assignment.log(filterGreaterThan(d, 5) == '[6,10,123,16,7,8,9,11]', 4);
-// assignment.log(filterGreaterThan(d, 10) == '[123,16,11]', 4);
-//
-//
-//
-//
-//
+
+var e = {
+    'firstName' : 'Second Name',
+    'lastName' : 'Second Last Name',
+    'getFullName' : getFullName = function(dValues) {
+        // [your code goes here]
+        var fn, ln, concatValue;
+        dValues = Object.values(e);
+        dValues.pop();
+        fn = dValues[0];
+        ln = dValues[1];
+
+        return fn + ", " +ln
+    }
+}
+
+console.log(e.getFullName());
+
+assignment.log(e.getFullName() === 'Second Name, Second Last Name', 3);
+
+
+
+
+
+//#4 write code so that console logs print out true
+//   filterGreaterThan(array, filter) should return a new array
+//   with all the values from initial array that are greater than filter
+//   i.e. [6, 10, 123, 16, 7, 8, 9, 11] and [123, 16, 11]
+
+function filterGreaterThan(array, filter) {
+    // [your code goes here]
+}
+
+d = [5, 6, 10, -1, 123, 1, 3, 16, 7, 8, 9, 11];
+
+assignment.log(filterGreaterThan(d, 5) == '[6,10,123,16,7,8,9,11]', 4);
+assignment.log(filterGreaterThan(d, 10) == '[123,16,11]', 4);
+
+
+
+
+
 // //#5 write code so that console logs print out true
 // //   add(addValue) should return a new arrays where addValue
 // //   is added to each value of original array
