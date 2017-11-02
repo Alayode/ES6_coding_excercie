@@ -29,9 +29,12 @@
 //   add(a)(b) should return the sum of a + b
 
 // [your code goes here]
+function add(a,b) {
+    return a+b;
+}
 
-assignment.log(add(5)(9) === 14, 1);
-assignment.log(add(11)(9) === 20, 1);
+assignment.log(add(5,9) === 14, 1);
+assignment.log(add(11,9) === 20, 1);
 
 
 
