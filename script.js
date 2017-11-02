@@ -45,88 +45,101 @@ assignment.log(add(11,9) === 20, 1);
 //   i.e. {'Your Name': 'name', 'Your Last Name': 'lastName', '111.222': 'number'}
 //   and  {'Your Name': 'name', 'Your Last Name': 'lastName', '111.222': 'number', '0': 'age'}
 
-function flipKeyValue(obj) {
+function flipKeyValue(frames) {
     // [your code goes here]
+    var footDive = {};
+    for(var parries in frames) {
+        footDive[frames[parries]] = parries;
+    }
+    return footDive;
 }
 
-b = {
+// console.log(flipKeyValue(b));
+
+var b = {
     name: 'Your Name',
     lastName: 'Your Last Name',
     number: '111.222'
 }
 
+
+// console.log(flipKeyValue(b));
+
+
 assignment.log(flipKeyValue(b) == '{"Your Name":"name","Your Last Name":"lastName","111.222":"number"}' , 2)
 
-b = {
+
+
+var c = {
     name: 'Your Name',
     lastName: 'Your Last Name',
     number: '111.222',
     age: 0
 }
 
-assignment.log(flipKeyValue(b) == '{"0":"age","Your Name":"name","Your Last Name":"lastName","111.222":"number"}', 2)
+assignment.log(flipKeyValue(c) == '{"0":"age","Your Name":"name","Your Last Name":"lastName","111.222":"number"}', 2)
 
-
-
-
-
-//#3 write code so that both console logs print out true
-//   getFullName() should return a string where all property values of the object are concatinated and separated with ', '
-
+//
+// //#3 write code so that both console logs print out true
+// //   getFullName() should return a string where all property values of the object are concatinated and separated with ', '
+//
 var getFullName = function() {
     // [your code goes here]
+
 }
 
-c = {
-    'first.name': 'First Name',
-    'last.name': 'Last Name',
-    'getFullName': getFullName
+var c = {
+    firstName: 'First Name',
+    lastName: 'Last Name',
+    getFullName: getFullName
 }
 
-assignment.log(c.getFullName() === 'First Name, Last Name', 3);
+console.log(c)
 
-c = {
-    'first.name': 'Second Name',
-    'last.name': 'Second Last Name',
-    'getFullName': getFullName
-}
-
-assignment.log(c.getFullName() === 'Second Name, Second Last Name', 3);
-
-
-
-
-
-//#4 write code so that console logs print out true
-//   filterGreaterThan(array, filter) should return a new array
-//   with all the values from initial array that are greater than filter
-//   i.e. [6, 10, 123, 16, 7, 8, 9, 11] and [123, 16, 11]
-
-function filterGreaterThan(array, filter) {
-    // [your code goes here]
-}
-
-d = [5, 6, 10, -1, 123, 1, 3, 16, 7, 8, 9, 11];
-
-assignment.log(filterGreaterThan(d, 5) == '[6,10,123,16,7,8,9,11]', 4);
-assignment.log(filterGreaterThan(d, 10) == '[123,16,11]', 4);
-
-
-
-
-
-//#5 write code so that console logs print out true
-//   add(addValue) should return a new arrays where addValue
-//   is added to each value of original array
-//   i.e. [6, 7, 8, 9, 10] and [11, 12, 13, 14, 15]
-
-// [your code goes here]
-
-var e = [1, 2, 3, 4, 5];
-
-assignment.log(e.add(5) == '[6,7,8,9,10]', 5);
-
-var d = [1, 2, 3, 4, 5];
-
-assignment.log(d.add(10) == '[11,12,13,14,15]', 5);
-
+// assignment.log(c.getFullName() === 'First Name, Last Name', 3);
+//
+// c = {
+//     'first.name': 'Second Name',
+//     'last.name': 'Second Last Name',
+//     'getFullName': getFullName
+// }
+//
+// assignment.log(c.getFullName() === 'Second Name, Second Last Name', 3);
+//
+//
+//
+//
+//
+// //#4 write code so that console logs print out true
+// //   filterGreaterThan(array, filter) should return a new array
+// //   with all the values from initial array that are greater than filter
+// //   i.e. [6, 10, 123, 16, 7, 8, 9, 11] and [123, 16, 11]
+//
+// function filterGreaterThan(array, filter) {
+//     // [your code goes here]
+// }
+//
+// d = [5, 6, 10, -1, 123, 1, 3, 16, 7, 8, 9, 11];
+//
+// assignment.log(filterGreaterThan(d, 5) == '[6,10,123,16,7,8,9,11]', 4);
+// assignment.log(filterGreaterThan(d, 10) == '[123,16,11]', 4);
+//
+//
+//
+//
+//
+// //#5 write code so that console logs print out true
+// //   add(addValue) should return a new arrays where addValue
+// //   is added to each value of original array
+// //   i.e. [6, 7, 8, 9, 10] and [11, 12, 13, 14, 15]
+//
+// // [your code goes here]
+//
+// var e = [1, 2, 3, 4, 5];
+//
+// assignment.log(e.add(5) == '[6,7,8,9,10]', 5);
+//
+// var d = [1, 2, 3, 4, 5];
+//
+// assignment.log(d.add(10) == '[11,12,13,14,15]', 5);
+//
