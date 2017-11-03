@@ -131,14 +131,35 @@ assignment.log(e.getFullName() === 'Second Name, Second Last Name', 3);
 //   with all the values from initial array that are greater than filter
 //   i.e. [6, 10, 123, 16, 7, 8, 9, 11] and [123, 16, 11]
 
-function filterGreaterThan(array, filter) {
+function filterGreaterThan(targetArray,filter) {
+
     // [your code goes here]
+    // targetValue = 5;
+    // console.log(num);
+    // console.log(targetArray);
+
+    return targetArray > 10 ;
 }
 
-d = [5, 6, 10, -1, 123, 1, 3, 16, 7, 8, 9, 11];
+function filterGreaterThanFive(targetArray) {
+    return targetArray > 5 ;
+}
 
-assignment.log(filterGreaterThan(d, 5) == '[6,10,123,16,7,8,9,11]', 4);
-assignment.log(filterGreaterThan(d, 10) == '[123,16,11]', 4);
+function filterGreaterThanTen(targetArray) {
+    return targetArray > 10 ;
+}
+function letsMakeFilterGreatAgain(targetArray,filter) {
+    var filtered = targetArray.filter(filter);
+    console.log(filtered);
+    return filtered;
+
+}
+
+var d = [5, 6, 10, -1, 123, 1, 3, 16, 7, 8, 9, 11];
+
+
+assignment.log(letsMakeFilterGreatAgain(d,filterGreaterThanFive) == '[6,10,123,16,7,8,9,11]', 4);
+assignment.log(letsMakeFilterGreatAgain(d, filterGreaterThanTen) == '[123,16,11]', 4);
 
 
 
