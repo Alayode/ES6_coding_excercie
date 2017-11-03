@@ -171,12 +171,58 @@ assignment.log(letsMakeFilterGreatAgain(d, filterGreaterThanTen) == '[123,16,11]
 // //   i.e. [6, 7, 8, 9, 10] and [11, 12, 13, 14, 15]
 //
 // // [your code goes here]
+
+// Array.prototype.add = function(qiymati,arrayInQuestion) {
+//     arrayInQuestion.forEach(
+//         function(numericalValue) {
+//             console.log(qiymati , numericalValue);
 //
-// var e = [1, 2, 3, 4, 5];
+//     });
+//     return;
+// }
+
+var addition =  function(entry) {
+    // entry = 5;
+    // var e = [1, 2, 3, 4, 5];
+    e.array.forEach(function(item) {
+        // console.log(entry + item);
+        return entry + item;
+    })
+};
+var e = {
+    'array': [1, 2, 3, 4, 5],
+    'add': addition;
+};
+
+var numberFive = 5;
+console.log(e.add(numberFive));
 //
-// assignment.log(e.add(5) == '[6,7,8,9,10]', 5);
 //
+// console.log(e.add(1));
+//
+// function add(entry) {
+//     // entry = 5;
+//     var e = [1, 2, 3, 4, 5];
+//     e.forEach(function(item) {
+//         console.log(entry + item);
+//         return entry + item;
+//     })
+//
+// }
+//
+// add(1);
+// add(5);
+// add(10);
+//
+// add(5);
+// console.log(e.add());
+//
+// var answer = e.greet();
+// console.log(answer);
+
+assignment.log(e.add(numberFive) == '[6,7,8,9,10]', 5);
+
 // var d = [1, 2, 3, 4, 5];
-//
+
 // assignment.log(d.add(10) == '[11,12,13,14,15]', 5);
 //
